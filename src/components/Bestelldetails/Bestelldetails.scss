@@ -1,0 +1,86 @@
+@import "../../variables.scss";
+
+.Bestelldetails {
+    position: relative;
+    width: 100vw;
+    background: #ebebeb;
+    .Bestelldetails__container {
+        background: #ffffff;
+        width: 100vw;
+        padding: 20px;
+        margin-bottom: 7px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        button:first-of-type {
+            margin: 10px 0;
+        }
+        .news-status {
+            font-size: 11px;
+            text-align: center;
+            margin: 5px 0;
+        }
+        .Bestelldetails__info {
+            margin: 5px 0;
+            p {
+                text-transform: capitalize;
+            }
+        }
+        .Bestelldetails__infoRow {
+            border-bottom: 1px solid $grey;
+            padding: 10px 0;
+            display: grid;
+            grid-template-columns: 15% 1fr 30%;
+            * {
+                align-self: center;
+            }
+            &.two {
+                grid-template-columns: 80% 20%;
+            }
+            img {
+                width: 20px;
+                height: 20px;
+            }
+            .last {
+                text-align: end;
+            }
+        }
+    }
+    .Popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75vw;
+        height: 75vw;
+        background: #ffffff;
+        padding: 60px 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        &.hidden {
+            display: none;
+        }
+        .closingIcon {
+            position: absolute;
+            top: calc(50% - 35vw);
+            right: calc(50% - 35vw);
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .Popup__option {
+            margin: 7px 0;
+            input {
+                margin-right: 10px;
+            }
+        }
+        input[type=text], input[type=email] {
+            width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 5px;
+            &:focus {
+                outline: none;
+                border: 2px solid $orange;
+            }
+        }
+    }
+}

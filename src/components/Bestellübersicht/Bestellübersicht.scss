@@ -1,0 +1,21 @@
+.Bestellübersicht {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .Bestellung__container {
+        background: #ebebeb;
+        flex: 1;
+    }
+    .Bestellungen__none {
+        width: 100vw;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+            text-align: center;
+        }
+    }
+}

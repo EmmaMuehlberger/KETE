@@ -1,0 +1,35 @@
+@import "../../../variables.scss";
+
+.Popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 75vw;
+    background: #ffffff;
+    padding: 60px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .closingIcon {
+        position: absolute;
+        top: calc(50% - 35vw);
+        right: calc(50% - 35vw);
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Popup__option {
+        margin: 7px 0;
+        input {
+            margin-right: 10px;
+        }
+    }
+    input[type=text], input[type=email] {
+        width: 100%;
+        padding: 7px 20px;
+        &:focus {
+            outline: none;
+            border: 2px solid $orange;
+        }
+    }
+}

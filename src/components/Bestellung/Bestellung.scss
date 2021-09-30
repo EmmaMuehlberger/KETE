@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.Bestellung {
+    width: 100vw;
+    padding: 20px 30px;
+    background: #ffffff;
+    margin-bottom: 7px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    .Bestellung__title {
+        display: flex;
+        text-transform: capitalize;
+    }
+    .Bestellung__details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px 0;
+        margin: 20px 0;
+        .info {
+            text-transform: capitalize;
+            text-align: end;
+        }
+    }
+}

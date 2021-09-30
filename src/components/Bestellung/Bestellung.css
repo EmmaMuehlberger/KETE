@@ -1,0 +1,32 @@
+.Bestellung {
+  width: 100vw;
+  padding: 20px 30px;
+  background: #ffffff;
+  margin-bottom: 7px;
+}
+
+.Bestellung:last-of-type {
+  margin-bottom: 0;
+}
+
+.Bestellung .Bestellung__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: capitalize;
+}
+
+.Bestellung .Bestellung__details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px 0;
+  margin: 20px 0;
+}
+
+.Bestellung .Bestellung__details .info {
+  text-transform: capitalize;
+  text-align: end;
+}
+/*# sourceMappingURL=Bestellung.css.map */

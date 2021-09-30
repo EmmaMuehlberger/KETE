@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.grey {
+  color: #acada8;
+}
+
+.green {
+  color: #1fe79b;
+}
+
+.orange {
+  color: #fb4f14;
+}
+
+.red {
+  color: #b90505;
+}
+
+.title {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+button {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  background: #ffffff;
+  border: 1px solid #fb4f14;
+  color: #fb4f14;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.highlight-btn {
+  background: #fb4f14;
+  color: #ffffff;
+}
+
+button:active {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+/*# sourceMappingURL=style.css.map */

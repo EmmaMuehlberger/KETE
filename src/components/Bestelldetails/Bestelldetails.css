@@ -1,0 +1,110 @@
+.Bestelldetails {
+  position: relative;
+  width: 100vw;
+  background: #ebebeb;
+}
+
+.Bestelldetails .Bestelldetails__container {
+  background: #ffffff;
+  width: 100vw;
+  padding: 20px;
+  margin-bottom: 7px;
+}
+
+.Bestelldetails .Bestelldetails__container:last-of-type {
+  margin-bottom: 0;
+}
+
+.Bestelldetails .Bestelldetails__container button:first-of-type {
+  margin: 10px 0;
+}
+
+.Bestelldetails .Bestelldetails__container .news-status {
+  font-size: 11px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__info {
+  margin: 5px 0;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__info p {
+  text-transform: capitalize;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow {
+  border-bottom: 1px solid #acada8;
+  padding: 10px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 1fr 30%;
+      grid-template-columns: 15% 1fr 30%;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow * {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow.two {
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow img {
+  width: 20px;
+  height: 20px;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow .last {
+  text-align: end;
+}
+
+.Bestelldetails .Popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 75vw;
+  height: 75vw;
+  background: #ffffff;
+  padding: 60px 20px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.Bestelldetails .Popup.hidden {
+  display: none;
+}
+
+.Bestelldetails .Popup .closingIcon {
+  position: absolute;
+  top: calc(50% - 35vw);
+  right: calc(50% - 35vw);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Bestelldetails .Popup .Popup__option {
+  margin: 7px 0;
+}
+
+.Bestelldetails .Popup .Popup__option input {
+  margin-right: 10px;
+}
+
+.Bestelldetails .Popup input[type=text], .Bestelldetails .Popup input[type=email] {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+}
+
+.Bestelldetails .Popup input[type=text]:focus, .Bestelldetails .Popup input[type=email]:focus {
+  outline: none;
+  border: 2px solid #fb4f14;
+}
+/*# sourceMappingURL=Bestelldetails.css.map */
