@@ -8,6 +8,11 @@
   font-size: 16px;
   line-height: 1.4;
   overflow-x: hidden;
+  color: #3c2314;
+}
+
+body {
+  padding-top: 80px;
 }
 
 .grey {
@@ -15,11 +20,11 @@
 }
 
 .green {
-  color: #1fe79b;
+  color: #74c3ae;
 }
 
 .orange {
-  color: #fb4f14;
+  color: #3c2314;
 }
 
 .red {
@@ -31,18 +36,22 @@
   text-transform: capitalize;
 }
 
+.small {
+  font-size: 13px;
+}
+
 button {
   padding: 10px 20px;
   text-transform: capitalize;
   background: #ffffff;
-  border: 1px solid #fb4f14;
-  color: #fb4f14;
+  border: 1px solid #3c2314;
+  color: #3c2314;
   cursor: pointer;
   width: 100%;
 }
 
 button.highlight-btn {
-  background: #fb4f14;
+  background: #3c2314;
   color: #ffffff;
 }
 

@@ -5,6 +5,7 @@
 }
 
 .Bestelldetails .Bestelldetails__container {
+  position: relative;
   background: #ffffff;
   width: 100vw;
   padding: 20px;
@@ -23,6 +24,36 @@
   font-size: 11px;
   text-align: center;
   margin: 5px 0;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__nav .arrow {
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__nav .small {
+  font-size: 10px;
+}
+
+.Bestelldetails .Bestelldetails__container .title {
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .Bestelldetails .Bestelldetails__container .Bestelldetails__info {
@@ -49,8 +80,8 @@
 }
 
 .Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow.two {
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
 }
 
 .Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow img {
@@ -60,6 +91,72 @@
 
 .Bestelldetails .Bestelldetails__container .Bestelldetails__infoRow .last {
   text-align: end;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 34px;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background-color: #acada8;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #74c3ae;
+          box-shadow: 0 0 1px #74c3ae;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch input:checked + .slider {
+  background-color: #74c3ae;
+}
+
+.Bestelldetails .Bestelldetails__container .Bestelldetails__benachrichtigungen .Bestelldetails__switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 .Bestelldetails .Popup {
@@ -105,6 +202,6 @@
 
 .Bestelldetails .Popup input[type=text]:focus, .Bestelldetails .Popup input[type=email]:focus {
   outline: none;
-  border: 2px solid #fb4f14;
+  border: 2px solid #3c2314;
 }
 /*# sourceMappingURL=Bestelldetails.css.map */

@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Bestelldetails.css';
 
 import closingIcon from "../../img/close.webp";
-import checkIcon from "../../img/check.png";
+import arrow from "../../img/arrow.png";
 
 const Bestelldetails = ({ bestellung }) => {
 	const [benachrichtigungen, setBenachrichtigungen] = useState(false);
@@ -14,11 +15,12 @@ const Bestelldetails = ({ bestellung }) => {
 
 
 	const handleBenachrichtigungen = () => {
+		console.log(" hfv,")
 		if(benachrichtigungen === false) {
 			changeShowPopup();
-		} else {
-			setBenachrichtigungen(false);
-		}
+			return;
+		}		
+		setBenachrichtigungen(false);
 	}
 
 	const changeMedium = (e) => {
@@ -61,6 +63,12 @@ const Bestelldetails = ({ bestellung }) => {
 	return (
 		<div className="Bestelldetails">
 			<div className="Bestelldetails__container">
+				<Link to="./">
+					<div className="Bestelldetails__nav">
+							<img className="arrow" src={arrow} alt="Pfeil" />
+						<p className="small">Übersicht</p>
+					</div>
+				</Link>
 				<h3 className="title">Bestelldetails</h3>
 				<div className="Bestelldetails__info">
 					<p className="grey">Bestellnr.</p>
@@ -79,26 +87,22 @@ const Bestelldetails = ({ bestellung }) => {
 				<p className="grey">Bestellverfolung</p>
 				{bestellung.lieferdetails.statusVerlauf.map(status => {
 					return (
-						<div className="Bestelldetails__infoRow" key={Math.random()}>
-							<img src={checkIcon} alt="checkmark" />
+						<div className="Bestelldetails__infoRow two" key={Math.random()}>
 							<p>{status.status}</p>
 							<p className="last">{status.datum}</p>
 						</div>
 					)
 				})}
-				<button className="highlight-btn">Lieferung bearbeiten</button>
-				<button onClick={handleBenachrichtigungen}>
-					{!benachrichtigungen
-						? "Benachrichtigungen aktivieren"
-						: "Benachrichtigungen deaktivieren"
+				<div className="Bestelldetails__benachrichtigungen">
+					{!benachrichtigungen 
+						? <label htmlFor="benachrichtigungen" className="red">Benachrichtigungen aktivieren</label>
+						: <label htmlFor="benachrichtigungen" className="green">Benachrichtigungen deaktivieren</label>
 					}
-				</button>
-				{!benachrichtigungen 
-					? <p className="news-status red">Benachrichtigungen deaktiviert</p>
-					: <>
-						<p className="news-status green">Benachrichtigungen aktiviert</p>
-					</>
-				}
+					<div className="Bestelldetails__switch">
+						<input type="checkbox" checked={benachrichtigungen} />
+						<span onClick={handleBenachrichtigungen} className="slider round"></span>
+					</div>
+				</div>
 			</div>
 			<div className="Bestelldetails__container">
 				<p className="grey">Produkte</p>

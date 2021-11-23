@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './style.css';
 
 import Header from "./components/Header/Header";
+import Title from "./components/Title/Title";
 import Bestellübersicht from "./components/Bestellübersicht/Bestellübersicht";
 import Bestelldetails from "./components/Bestelldetails/Bestelldetails";
 
@@ -175,12 +176,13 @@ const App = () => {
 	return (
 		<div className="App">
 			<Router>
+				<Header />
 				<Switch>
 					<Route path="/:id" render={({match}) => (
 						<Bestelldetails bestellung={bestellungen.find(b => b.id === match.params.id)} />
 					)} />
 					<Route path="/">
-						<Header />
+						<Title />
 						<Bestellübersicht bestellungen={bestellungen} />
 					</Route>
 				</Switch>

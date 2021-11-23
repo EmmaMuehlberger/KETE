@@ -9,6 +9,11 @@
     font-size: 16px;
     line-height: 1.4;
     overflow-x: hidden;
+    color: $orange;
+}
+
+body {
+    padding-top: 80px;
 }
 
 .grey {
@@ -30,6 +35,10 @@
 .title {
     font-size: 24px;
     text-transform: capitalize;
+}
+
+.small {
+    font-size: 13px;
 }
 
 button {
