@@ -8,14 +8,13 @@ import arrow from "../../img/arrow.png";
 const Bestelldetails = ({ bestellung }) => {
 	const [benachrichtigungen, setBenachrichtigungen] = useState(false);
 	const [option, setOption] = useState({
-		medium: "",
+		medium: "email",
 		value: ""
 	});
 	const [showPopup, setShowPopup] = useState(false);
 
 
 	const handleBenachrichtigungen = () => {
-		console.log(" hfv,")
 		if(benachrichtigungen === false) {
 			changeShowPopup();
 			return;
@@ -127,18 +126,28 @@ const Bestelldetails = ({ bestellung }) => {
 				</div>
 			</div>
 			<div className={showPopup ? "Popup" : "Popup hidden"}>
+				<header>
+					<ul>
+						<li onClick={e => changeMedium(e)} className={option?.medium === "email" ? "active" : null} id="email">E-Mail</li>
+						<li onClick={e => changeMedium(e)} className={option?.medium === "phone" ? "active" : null} id="phone">SMS</li>
+					</ul>
+				</header>
 				<img onClick={changeShowPopup} className="closingIcon" src={closingIcon} alt="cross" />
-				<h3>Wie möchten Sie benachrichtigt werden?</h3>
-				<div className="Popup__option">
-					<input onClick={e => changeMedium(e)} type="radio" name="popup" id="email" checked={option?.medium === "email" ? "checked" : null} />
-					<label>Email</label>
-				</div>
-				{option?.medium === "email" ? <><input type="email" name="email" id="email" /><button onClick={changeOptionValue} className="highlight-btn">Speichern</button></> : null }
-				<div className="Popup__option">
-					<input onClick={e => changeMedium(e)} type="radio" name="popup" id="phone" checked={option?.medium === "phone" ? "checked" : null} />
-					<label>SMS</label>
-				</div>
-				{option?.medium === "phone" ? <><input type="text" name="phone" id="phone" /><button onClick={changeOptionValue} className="highlight-btn">Speichern</button></> : null }
+				{option?.medium === "email" ? 
+					<div className="Popup__content">
+						<label for="email">Bitte geben Sie Ihre Emailadresse ein</label>
+						<input type="email" name="email" id="email" />
+						<button onClick={changeOptionValue} className="highlight-btn">Speichern</button>
+					</div> 
+					: null 
+				}
+				{option?.medium === "phone" ? 
+					<div className="Popup__content">
+						<label for="phone">Bitte geben Sie Ihre Telefonnummer ein</label>
+						<input type="text" name="phone" id="phone" />
+						<button onClick={changeOptionValue} className="highlight-btn">Speichern</button>
+					</div> 
+				: null }
 			</div>
 		</div>
 	);

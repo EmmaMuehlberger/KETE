@@ -1,4 +1,4 @@
-header {
+.Header {
   background: #3c2314;
   position: fixed;
   top: 0;
@@ -17,7 +17,7 @@ header {
   z-index: 1000;
 }
 
-header img {
+.Header img {
   height: 35px;
   -o-object-fit: contain;
      object-fit: contain;

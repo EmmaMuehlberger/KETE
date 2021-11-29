@@ -6,7 +6,7 @@ import menu from "../../img/menu.png";
 
 const Header = () => {
 	return (
-		<header>
+		<header className="Header">
             <Link to="./" >
 			    <img src={logo} alt="Logo" />
             </Link>
