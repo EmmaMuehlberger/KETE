@@ -92,6 +92,7 @@ const Bestelldetails = ({ bestellung }) => {
 						</div>
 					)
 				})}
+				{bestellung.lieferdetails.statusNummer === 0 ?
 				<div className="Bestelldetails__benachrichtigungen">
 					{!benachrichtigungen 
 						? <label htmlFor="benachrichtigungen" className="red">Benachrichtigungen aktivieren</label>
@@ -102,6 +103,7 @@ const Bestelldetails = ({ bestellung }) => {
 						<span onClick={handleBenachrichtigungen} className="slider round"></span>
 					</div>
 				</div>
+				: null}
 			</div>
 			<div className="Bestelldetails__container">
 				<p className="grey">Produkte</p>
